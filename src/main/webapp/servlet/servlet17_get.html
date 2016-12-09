@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>servlet17</title>
+</head>
+<body>
+<h1>GET 요청</h1>
+웹 브라우저는 다음의 경우 GET 요청을 서버에 보낸다. 
+<ul>
+  <li>웹 브라우저에서 주소를 입력하여 요청한 경우</li>
+  <li>a 태그의 링크를 클릭한 경우</li>
+  <li>form 태그의 method 속성값이 "get"인 경우</li>
+</ul>
+<a href="service">GET 요청 링크</a><br>
+<form action="service" method="get">
+  <button>GET 요청하는 제출 버튼</button>
+</form>
+<form action="service">
+  <button>GET 요청하는 제출 버튼(method 속성 생략: 기본이 GET이다.)</button>
+</form>
+</body>
+</html>
