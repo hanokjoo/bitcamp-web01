@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT books (book*, press*, author*)>
+<!ELEMENT book (#PCDATA)>
+<!ELEMENT press EMPTY>
+<!ELEMENT author (#PCDATA)>
+
+<!-- 속성 선언
+속성 타입
+1) CDATA      : 문자열
+2) (값|값|값) : 열거형
+3) ID         : XML 이름짓는 규칙에 따라 작성한 문자열. 즉 숫자가 "-"로 시작할 수 없다.
+4) IDREF      : 다른 태그의 ID 값을 참조
+-->
+
+<!ATTLIST book
+  id ID #REQUIRED
+  pid IDREF #IMPLIED
+  aid IDREFS #IMPLIED
+>
+
+<!ATTLIST press
+  id ID #REQUIRED
+  name CDATA #REQUIRED
+>
+
+<!ATTLIST author
+  id ID #REQUIRED
+>
